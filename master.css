@@ -3,3 +3,52 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+main {
+  width: 70%;
+  margin: 20px auto;
+}
+
+#template {
+  display: none;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20pt;
+  width: 100%;
+}
+
+.title span {
+  position: relative;
+  top: 50%;
+  color: lightgray;
+}
+
+.title span:hover {
+  color: black;
+}
+
+.gennaio {
+  font-size: 30pt;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 20px 60px;
+}
+
+.list {
+  font-size: 18pt;
+  list-style: none;
+  text-align: center;
+}
+
+.list li {
+  padding: 10px 0;
+}
+
+.red {
+  color: red;
+}

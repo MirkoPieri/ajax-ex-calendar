@@ -2,19 +2,34 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Calendario Festività</title>
+    <title>Calendario Festività - 2018</title>
     <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/it.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
   </head>
 
   <body>
     <main>
+      <div class="general">
+        <div class="title">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <div class="gennaio"></div>
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </div>
 
+        <ul class="list">
 
+        </ul>
+      </div>
 
+      <script id="template" type="text/x-handlebars-template">
+        <li dateref="{{holidays}}">{{giorno}}</li>
+      </script>
     </main>
+
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
