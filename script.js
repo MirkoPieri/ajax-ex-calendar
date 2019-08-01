@@ -8,7 +8,7 @@ myfunction();
 
 $(".title .avanti").click(function() {
   meseIndex += 1;
-  $(".general .list").text(" ");
+  $(".general .sezioni").text(" ");
   if (meseIndex > 12) {
     $(".general").hide();
     alert("Dati non disponibili per l'anno successivo");
@@ -20,7 +20,7 @@ $(".title .avanti").click(function() {
 
 $(".title .indietro").click(function() {
   meseIndex -= 1;
-  $(".general .list").text(" ");
+  $(".general .sezioni").text(" ");
   if (meseIndex < 1) {
     $(".general").hide();
     alert("Dati non disponibili per l'anno precedente");
@@ -49,7 +49,8 @@ function myfunction(a) {
 
     var context = {giorno: giorni, holidays: moment([anno, mese, i]).format("YYYY-MM-DD")};
     var html = template(context);
-    $(".list").append(html);
+    $(".sezioni").append(html);
+    $(".sezioni > div").addClass("quadrato");
   }
 
   $.ajax (
@@ -64,10 +65,10 @@ function myfunction(a) {
           var objfesta = festa[i];
           console.log(objfesta.name, objfesta.date);
 
-          var liFest = $("li[dateref='" + objfesta.date + "']");
+          var liFest = $("div[dateref='" + objfesta.date + "']");
 
           if (liFest) {
-            liFest.append(" - ", objfesta.name);
+            liFest.append("<span>" + objfesta.name + "</span>");
             liFest.addClass("red");
           }
         }

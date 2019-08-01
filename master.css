@@ -9,6 +9,11 @@ main {
   margin: 20px auto;
 }
 
+.sezioni {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 #template {
   display: none;
 }
@@ -53,5 +58,26 @@ main {
 }
 
 .red {
-  color: red;
+  background-color: lightpink;
+}
+
+.quadrato {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.sezioni .quadrato p {
+  padding: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sezioni .quadrato span {
+  position: absolute;
+  top: 95%;
+  left: 95%;
+  transform: translate(-95%, -95%);
+  font-weight: bold;
 }
