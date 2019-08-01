@@ -29,6 +29,7 @@ main {
 
 .title span:hover {
   color: black;
+  cursor: pointer;
 }
 
 .gennaio {
