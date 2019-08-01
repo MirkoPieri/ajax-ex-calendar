@@ -62,8 +62,8 @@ main {
 }
 
 .quadrato {
-  width: 200px;
-  height: 200px;
+  width: calc(100% / 7);
+  height: 180px;
   border: 1px solid black;
   position: relative;
 }
