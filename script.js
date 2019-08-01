@@ -9,8 +9,27 @@ myfunction();
 $(".title .avanti").click(function() {
   meseIndex += 1;
   $(".general .list").text(" ");
-  myfunction();
+  if (meseIndex > 12) {
+    $(".general").hide();
+    alert("Dati non disponibili per l'anno successivo");
+    meseIndex -= 1;
+  }
+    $(".general").show();
+    myfunction();
 });
+
+$(".title .indietro").click(function() {
+  meseIndex -= 1;
+  $(".general .list").text(" ");
+  if (meseIndex < 1) {
+    $(".general").hide();
+    alert("Dati non disponibili per l'anno precedente");
+    meseIndex += 1;
+  }
+    $(".general").show();
+    myfunction();
+});
+
 function myfunction(a) {
   var database = moment("2018" + -meseIndex + "-01");
   var giorniMese = database.daysInMonth();
